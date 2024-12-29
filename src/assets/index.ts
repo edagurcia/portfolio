@@ -1,4 +1,7 @@
+export * from "@/assets/Developer";
 export * from "@/assets/ExpressJSIcon";
+export * from "@/assets/Github";
+export * from "@/assets/Linkedin";
 export * from "@/assets/MongoDBIcon";
 export * from "@/assets/NextJSIcon";
 export * from "@/assets/NodeJSIcon";
@@ -8,3 +11,4 @@ export * from "@/assets/ReactIcon";
 export * from "@/assets/ReduxIcon";
 export * from "@/assets/SanityIOIcon";
 export * from "@/assets/TailwindCssIcon";
+export * from "@/assets/X";
