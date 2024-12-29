@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Archivo } from "next/font/google";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { ThemeProvider } from "@/components/ThemeProvider";
+import { ThemeWrapper } from "@/components/ThemeWrapper";
 import "./globals.css";
 
 const archivo = Archivo({
@@ -25,20 +25,27 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`antialiased ${archivo.variable}`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                const theme = localStorage.getItem('theme') || 'light';
+                if (theme === 'dark') {
+                  document.documentElement.classList.add('dark');
+                } else {
+                  document.documentElement.classList.remove('dark');
+                }
+              })();
+            `,
+          }}
+        />
+        <ThemeWrapper>
           <div className="flex min-h-screen flex-col">
-            <main className="flex-1">
-              <Header />
-              {children}
-              <Footer />
-            </main>
+            <Header />
+            <main className="flex-1">{children}</main>
+            <Footer />
           </div>
-        </ThemeProvider>
+        </ThemeWrapper>
       </body>
     </html>
   );

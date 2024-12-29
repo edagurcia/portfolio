@@ -11,7 +11,7 @@ export const LanguageToggle = () => {
     <>
       {isEnglish ? (
         <button type="button" className="btn" onClick={setSpanish}>
-          <span>EN</span>
+          <span className="text-base md:text-2xl">EN</span>
         </button>
       ) : (
         <button type="button" className="btn" onClick={setEnglish}>

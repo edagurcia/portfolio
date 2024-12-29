@@ -14,7 +14,7 @@ export const AboutMe = () => {
     } else {
       setAboutme(aboutES);
     }
-  }, [isEnglish]);
+  }, [isEnglish, aboutEN, aboutES]);
 
   return (
     <section className="section">

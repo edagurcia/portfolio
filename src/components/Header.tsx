@@ -7,7 +7,7 @@ import { Developer } from "@/assets";
 
 export const Header = () => {
   return (
-    <header className="w-full fixed top-0 left-0 backdrop-blur-md">
+    <header className="w-full fixed top-0 left-0 z-10 backdrop-blur-md">
       <div className="container !max-w-full">
         <div className="h-20 flex justify-between items-center">
           <div className="flex items-center">
