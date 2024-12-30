@@ -36,14 +36,14 @@ export const Hero = () => {
         <div className="md:col-span-7 flex flex-col justify-center">
           <div className="container !max-w-full">
             <div className="flex flex-col items-center justify-center gap-5 mt-5">
-              <h1 className="text-2xl md:text-3xl lg:text-4xl tracking-tight font-semibold text-neutral-500">
+              <h1 className="text-2xl md:text-3xl lg:text-4xl tracking-tight font-semibold text-neutral-500 dark:text-neutral-100">
                 {title}
               </h1>
-              <p className="text-neutral-400 text-lg md:text-xl lg:text-2xl tracking-tight -mt-5">
+              <p className="text-neutral-400 dark:text-neutral-300 text-lg md:text-xl lg:text-2xl tracking-tight -mt-5">
                 {subtitle}
               </p>
 
-              <h4 className="text-3xl md:text-4xl lg:text-6xl text-center text-neutral-600 tracking-tight">
+              <h4 className="text-3xl md:text-4xl lg:text-6xl text-center text-neutral-600 dark:text-neutral-300 tracking-tight">
                 {slogan}
               </h4>
 
@@ -53,7 +53,11 @@ export const Hero = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Github width={35} height={35} className="text-neutral-500" />
+                  <Github
+                    width={35}
+                    height={35}
+                    className="text-neutral-500 dark:text-neutral-300"
+                  />
                 </a>
                 <a
                   href="https://www.linkedin.com/in/edmundo-dominguez-agurcia-41bb59292/"
@@ -63,7 +67,7 @@ export const Hero = () => {
                   <Linkedin
                     width={35}
                     height={35}
-                    className="text-neutral-500"
+                    className="text-neutral-500 dark:text-neutral-300"
                   />
                 </a>
                 <a
@@ -71,7 +75,11 @@ export const Hero = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <X width={30} height={30} className="text-neutral-500" />
+                  <X
+                    width={30}
+                    height={30}
+                    className="text-neutral-500 dark:text-neutral-300"
+                  />
                 </a>
               </div>
               <div className="flex items-center justify-center gap-5 mt-5">
@@ -79,7 +87,7 @@ export const Hero = () => {
                   href={isEnglish ? englishResume : spanishResume}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-5 py-3 bg-neutral-500 text-white rounded-md text-lg"
+                  className="px-5 py-3 bg-neutral-500 dark:bg-neutral-800 text-white rounded-md text-lg"
                 >
                   {isEnglish ? "Resume" : "Currículum"}
                 </a>
