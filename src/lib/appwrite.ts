@@ -1,4 +1,4 @@
-import { Account, Client, Databases } from "appwrite";
+import { Client, Databases } from "appwrite";
 
 type AppwriteConfig = {
   url: string;
@@ -27,5 +27,4 @@ const client = new Client();
 client.setEndpoint(appwriteConfig.url);
 client.setProject(appwriteConfig.projectId);
 
-export const account = new Account(client);
 export const databases = new Databases(client);
