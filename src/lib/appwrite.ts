@@ -9,6 +9,8 @@ type AppwriteConfig = {
   heroESId: string;
   aboutENId: string;
   aboutESId: string;
+  experienceENId: string;
+  experienceESId: string;
 };
 
 export const appwriteConfig: AppwriteConfig = {
@@ -20,6 +22,10 @@ export const appwriteConfig: AppwriteConfig = {
   heroESId: process.env.NEXT_PUBLIC_APPWRITE_COLLECTION_HERO_ES_ID ?? "",
   aboutENId: process.env.NEXT_PUBLIC_APPWRITE_COLLECTION_ABOUT_EN_ID ?? "",
   aboutESId: process.env.NEXT_PUBLIC_APPWRITE_COLLECTION_ABOUT_ES_ID ?? "",
+  experienceENId:
+    process.env.NEXT_PUBLIC_APPWRITE_COLLECTION_EXPERIENCE_EN_ID ?? "",
+  experienceESId:
+    process.env.NEXT_PUBLIC_APPWRITE_COLLECTION_EXPERIENCE_ES_ID ?? "",
 };
 
 const client = new Client();

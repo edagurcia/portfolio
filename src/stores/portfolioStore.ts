@@ -24,7 +24,7 @@ type PortfolioState = {
 export const usePorfolioStore = create<PortfolioState>()(
   persist(
     (set) => ({
-      isLoading: false,
+      isLoading: true,
       isEnglish: false,
       heroeES: null,
       heroeEN: null,

@@ -4,9 +4,12 @@ import Link from "next/link";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { LanguageToggle } from "@/components/LanguageToggle";
 import { Developer } from "@/assets";
+import { usePorfolioStore } from "@/stores/portfolioStore";
 
 export const Header = () => {
-  return (
+  const isLoading = usePorfolioStore((state) => state.isLoading);
+
+  return isLoading ? null : (
     <header className="w-full fixed top-0 left-0 z-10 backdrop-blur-md">
       <div className="container !max-w-full">
         <div className="h-20 flex justify-between items-center">

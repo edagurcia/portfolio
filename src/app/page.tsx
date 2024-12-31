@@ -7,9 +7,12 @@ import { Projects } from "@/components/sections/Projects";
 import { Experience } from "@/components/sections/Experience";
 import { Contact } from "@/components/sections/Contact";
 import { usePorfolio } from "@/apis/portfolio";
+import { usePorfolioStore } from "@/stores/portfolioStore";
+import { LoadingPage } from "@/components/LoadingPage";
 
 const HomePage = () => {
   const { getPortfolioData } = usePorfolio();
+  const isLoading = usePorfolioStore((state) => state.isLoading);
 
   const isMounted = useRef(true);
 
@@ -23,7 +26,9 @@ const HomePage = () => {
     }
   }, []);
 
-  return (
+  return isLoading ? (
+    <LoadingPage />
+  ) : (
     <>
       <Hero />
       <AboutMe />

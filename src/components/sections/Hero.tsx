@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { usePorfolioStore } from "@/stores/portfolioStore";
-import { Github, Linkedin, X } from "@/assets";
 import Ed from "@/assets/img/Ed.jpeg";
 
 export const Hero = () => {
@@ -47,41 +46,6 @@ export const Hero = () => {
                 {slogan}
               </h4>
 
-              <div className="mt-5 flex items-center justify-center gap-5">
-                <a
-                  href="https://github.com/edagurcia"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Github
-                    width={35}
-                    height={35}
-                    className="text-neutral-500 dark:text-neutral-300"
-                  />
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/edmundo-dominguez-agurcia-41bb59292/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Linkedin
-                    width={35}
-                    height={35}
-                    className="text-neutral-500 dark:text-neutral-300"
-                  />
-                </a>
-                <a
-                  href="https://x.com/edagurcia"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <X
-                    width={30}
-                    height={30}
-                    className="text-neutral-500 dark:text-neutral-300"
-                  />
-                </a>
-              </div>
               <div className="flex items-center justify-center gap-5 mt-5">
                 <a
                   href={isEnglish ? englishResume : spanishResume}
